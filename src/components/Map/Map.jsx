@@ -1,19 +1,20 @@
 import React from "react";
 import GoogleMapReact from 'google-map-react';
-import {Paper, Typography, useMediaQuery} from '@material-ui/core';
+import {isMuiElement, Paper, Typography, useMediaQuery} from '@material-ui/core';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import Rating from '@material-ui/lab';
 
 import useStyles from './styles';
 
-const Map =({setCoordinates, setBounds, coordinates})=>{
+const Map =({setCoordinates, setBounds, coordinates, places})=>{
+    const matches = useMediaQuery('(min-width:600px)');
     const classes = useStyles();
     const Mobile = useMediaQuery('(min-width:600ox');
 
     return(
         <div className={classes.mapContainer}>
             <GoogleMapReact 
-                bootstrapURLKeys={{key:'AIzaSyBMNn1Sq7xx6Iw7TncaOPL8pAZQCu8Q6Sk'}}
+                bootstrapURLKeys={{key:'AIzaSyDowhKmpgsqfpyC5BS5TZWMiKT5qXXcj6k'}}
                 defaultCenter={coordinates}
                 Center={coordinates}
                 defaultZoom={14}
@@ -24,7 +25,7 @@ const Map =({setCoordinates, setBounds, coordinates})=>{
                     setBounds({ne:e.marginBounds.ne, sw:e.marginBounds.sw});
                 }}
             >
-                
+               
             </GoogleMapReact>
 
         </div>
@@ -32,3 +33,4 @@ const Map =({setCoordinates, setBounds, coordinates})=>{
 }
 
 export default Map;
+ 

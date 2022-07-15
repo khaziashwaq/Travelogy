@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
   formControl: {
-    margin: theme.spacing(1), minWidth: 120, marginBottom: '30px',
+    margin: theme.spacing(1), minWidth: 120, marginBottom: '30px', padding:'100px'
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
@@ -14,9 +14,9 @@ export default makeStyles((theme) => ({
     padding: '25px',
   },
   marginBottom: {
-    marginBottom: '30px',
+    marginBottom: '60px',
   },
   list: {
-    height: '75vh', overflow: 'auto',
+    height: '90vh', overflow: 'auto',
   },
 }));
